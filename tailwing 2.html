@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex bg-gray-100 min-h-screen">
+
+  <!-- Sidebar -->
+  <aside class="w-64 bg-gray-900 text-gray-100 flex flex-col">
+    <div class="p-6 text-2xl font-bold border-b border-gray-700">Store Admin</div>
+    <nav class="flex-1 p-4 space-y-2">
+      <a href="#" class="flex items-center p-3 rounded hover:bg-gray-800"><span class="ml-2">📊 Dashboard</span></a>
+      <a href="#" class="flex items-center p-3 rounded hover:bg-gray-800"><span class="ml-2">🛒 Orders</span></a>
+      <a href="#" class="flex items-center p-3 rounded hover:bg-gray-800"><span class="ml-2">📦 Products</span></a>
+      <a href="#" class="flex items-center p-3 rounded hover:bg-gray-800"><span class="ml-2">👥 Customers</span></a>
+      <a href="#" class="flex items-center p-3 rounded hover:bg-gray-800"><span class="ml-2">📈 Reports</span></a>
+      <a href="#" class="flex items-center p-3 rounded hover:bg-gray-800"><span class="ml-2">⚙️ Settings</span></a>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <div class="flex-1 flex flex-col">
+    
+    <!-- Top Navbar -->
+    <header class="flex justify-between items-center bg-white p-4 shadow-md">
+      <div class="text-xl font-semibold">🏪 Your Store</div>
+      <div class="flex items-center space-x-4">
+        <input type="text" placeholder="Search..." class="border rounded-lg px-3 py-1 focus:outline-none">
+        <button class="text-gray-600 hover:text-gray-900">🛍️</button>
+        <button class="text-gray-600 hover:text-gray-900">🔔</button>
+        <img src="boy.jpg" alt="Profile" class="w-8 h-8 rounded-full">
+      </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="p-6 bg-white shadow mt-4 mx-4 rounded-lg">
+      <div class="flex flex-wrap justify-between items-center">
+        <div>
+          <h1 class="text-2xl font-bold">Admin Dashboard</h1>
+          <p class="text-gray-500">Manage your store effectively</p>
+        </div>
+        <div class="space-x-2">
+          <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Add Product</button>
+          <button class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Generate Report</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Overview Cards -->
+    <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-6">
+      <div class="bg-white p-4 rounded-lg shadow flex flex-col items-center">
+        <div class="text-3xl">🛍️</div>
+        <h2 class="text-lg font-semibold mt-2">Total Orders</h2>
+        <p class="text-xl font-bold mt-1">1,240</p>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow flex flex-col items-center">
+        <div class="text-3xl">💰</div>
+        <h2 class="text-lg font-semibold mt-2">Total Revenue</h2>
+        <p class="text-xl font-bold mt-1">$58,320</p>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow flex flex-col items-center">
+        <div class="text-3xl">👤</div>
+        <h2 class="text-lg font-semibold mt-2">New Customers</h2>
+        <p class="text-xl font-bold mt-1">350</p>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow flex flex-col items-center">
+        <div class="text-3xl">📦</div>
+        <h2 class="text-lg font-semibold mt-2">Products in Stock</h2>
+        <p class="text-xl font-bold mt-1">780</p>
+      </div>
+    </section>
+
+    <!-- Charts Section -->
+    <section class="grid grid-cols-1 lg:grid-cols-2 gap-4 px-6">
+      <div class="bg-white p-4 rounded-lg shadow h-64 flex items-center justify-center text-gray-400">
+        📈 Sales Chart Placeholder
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow h-64 flex items-center justify-center text-gray-400">
+        🥧 Traffic Source Chart Placeholder
+      </div>
+    </section>
+
+    <!-- Recent Orders Table -->
+    <section class="p-6">
+      <div class="bg-white rounded-lg shadow p-4 overflow-x-auto">
+        <h2 class="text-lg font-semibold mb-3">Recent Orders</h2>
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-gray-100 text-gray-600">
+              <th class="p-3">Order ID</th>
+              <th class="p-3">Customer</th>
+              <th class="p-3">Product</th>
+              <th class="p-3">Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-t">
+              <td class="p-3">#1001</td>
+              <td class="p-3 flex items-center space-x-2">
+                <img src="men.jpg" class="rounded-full w-10 h-10"" alt="">
+                <span>John Doe</span>
+              </td>
+              <td class="p-3">Smartwatch</td>
+              <td class="p-3">Oct 20, 2025</td>
+            </tr>
+            <tr class="border-t">
+              <td class="p-3">#1002</td>
+              <td class="p-3 flex items-center space-x-2">
+                <img src="women.jpeg" class="rounded-full w-10 h-10" alt="">
+                <span>Sarah Smith</span>
+              </td>
+              <td class="p-3">Bluetooth Speaker</td>
+              <td class="p-3">Oct 21, 2025</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Product Cards Section -->
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-4 p-6">
+      <div class="bg-white rounded-lg shadow p-4">
+        <img src="watch.jpg" class="rounded-lg mb-3" alt="Product 1">
+        <h3 class="text-lg font-semibold">Smartwatch</h3>
+        <p class="text-gray-500">$199 — In Stock</p>
+      </div>
+      <div class="bg-white rounded-lg shadow p-4">
+        <img src="ear.jpeg" class="rounded-lg mb-3" alt="Product 2">
+        <h3 class="text-lg font-semibold">Wireless Earbuds</h3>
+        <p class="text-gray-500">$99 — In Stock</p>
+      </div>
+      <div class="bg-white rounded-lg shadow p-4">
+        <img src="mouse.jpeg" class="rounded-lg mb-3" alt="Product 3">
+        <h3 class="text-lg font-semibold">Gaming Mouse</h3>
+        <p class="text-gray-500">$49 — Out of Stock</p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 text-center py-4 mt-auto">
+      Built with Tailwind CSS – Your Store Name
+    </footer>
+
+  </div>
+</body>
+</html>
